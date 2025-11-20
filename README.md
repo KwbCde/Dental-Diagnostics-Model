@@ -3,6 +3,9 @@
 
 # **Dental Imaging Model EfficientNet-B0 Classifier + Grad-CAM**
 
+### Live Demo To Test Model
+https://dental-diagnostics-model.streamlit.app/
+
 A dental imaging classifier built with **PyTorch**, **EfficientNet-B0** and **Grad-CAM**.
 The model predicts four categories from oral photos:
 
@@ -204,4 +207,5 @@ To train:
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 ---
+
 
