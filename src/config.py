@@ -1,9 +1,11 @@
 import os
+import torch
 
-# Base directory of project
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+# Build ROOT_DIR relative to file location
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-MODEL_PATH = os.path.join(BASE_DIR, "ml", "models", "dental_classifier.pth")
+#  absolute model path
+MODEL_PATH = os.path.join(ROOT_DIR, "ml", "models", "dental_classifier.pth")
 
-IMG_SIZE = 224
-DEVICE = "cuda"
+# Device selection
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"

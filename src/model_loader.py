@@ -14,7 +14,7 @@ def load_model(weights_path: str, device: str = "cpu"):
     model.classifier[1] = nn.Linear(1280, 4)
     
     # Load state dict
-    state = torch.load(weights_path, map_location="cpu")
+    state = torch.load(weights_path, map_location=device)
     model.load_state_dict(state)
     
     # Set evaluation mode
