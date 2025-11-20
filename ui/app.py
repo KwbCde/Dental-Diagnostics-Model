@@ -52,10 +52,10 @@ if uploaded_file is not None:
     cam = result["cam"]
     image_tensor = result["image_tensor"]  # on CPU already
 
-    # --- Build Grad-CAM visuals ---
+    # Build Grad-CAM visuals
     orig_img, heatmap, overlay = overlay_heatmap(image_tensor, cam)
 
-    # --- Layout: 3 columns ---
+    # Layout: 3 columns
     col1, col2, col3 = st.columns(3)
 
     with col1:
@@ -81,8 +81,8 @@ if uploaded_file is not None:
 
     # Show full class probability table
     st.subheader("Class probabilities")
-    f"**Healthy:** {probs[0]:.3f}"
-    f"**Plaque:** {probs[1]:.3f}"
-    f"**Gum Inflammation:** {probs[2]:.3f}"
+    f"**Gum Inflammation:** {probs[0]:.3f}"
+    f"**Healthy:** {probs[1]:.3f}"
+    f"**Plaque:** {probs[2]:.3f}"
     f"**Unknown:** {probs[3]:.3f}"
 

@@ -2,8 +2,10 @@ import torch
 from torchvision import transforms
 from PIL import Image
 import numpy as np
+from torchvision import datasets
 
-CLASS_NAMES = ["healthy", "plaque", "inflammation", "unknown"]
+dataset = datasets.ImageFolder("ml/data/train")
+CLASS_NAMES = dataset.classes
 
 def get_inference_transform(img_size=224):
     return transforms.Compose([
