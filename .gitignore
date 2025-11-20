@@ -8,11 +8,6 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Model weights
-models/*.pth
-*.pt
-*.pth
-
 # Data
 data/*
 train
