@@ -27,13 +27,13 @@ def get_engine():
 
 engine = get_engine()
 
-# --------- UI Layout ---------
+# UI Layout
 st.set_page_config(page_title="Dental AI Classifier", layout="wide")
 st.title("Dental Imaging Classifier + Grad-CAM")
 st.caption(f"Device: **{DEVICE}** | Model: EfficientNet-B0 (4 classes)")
 
 uploaded_file = st.file_uploader(
-    "Upload a dental image (X-ray or intraoral photo)", 
+    "Upload a dental image (intraoral photo)", 
     type=["png", "jpg", "jpeg"]
 )
 
